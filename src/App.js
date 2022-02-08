@@ -2,15 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './style/RickAndMorty.css';
 
 const RickAndMorty = () => {
-  const [characters, setCharacters] = useState([]); //itera el array de objetos
-  const [character, setCharacter] = useState(''); // obtiene el valor (por id) del personaje
-  const [characterSelected, setCharacterSelected] = useState({}); //devuelve el valor de un personaje
+  const [characters, setCharacters] = useState([]);
+  const [character, setCharacter] = useState('');
+  const [characterSelected, setCharacterSelected] = useState({});
   const [loading, setLoading] = useState(false);
-  // const [state, setState] = useState({
-  //   characters: [],
-  //   character: '',
-  //   characterSelected: {},
-  // });
+
 
   useEffect(() => {
     apiFetch();
